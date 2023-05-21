@@ -1,6 +1,6 @@
 # Servicios en Red con Java
 
-## En este apartado recojo varios pequeños proyectos de distintos servicios en red utilizando Java
+### En este apartado recojo varios pequeños proyectos de distintos servicios de seguridad y en red utilizando Java
 ### [ResumenFichero](https://github.com/izhim/Servicios-en-Red/blob/main/ResumenFichero.java)
 Genera el resumen de un fichero pasado como argumento. El resumen se muestra en hexadecimal utilizando los algoritmos SHA-256 y MD5.
 ### [LogFTP_Email](https://github.com/izhim/Servicios-en-Red/blob/main/LogFTP_Email.java)
