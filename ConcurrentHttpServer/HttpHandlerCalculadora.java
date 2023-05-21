@@ -1,6 +1,3 @@
-
-package servidor2;
-
 import utilidades.Calculadora;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -29,15 +26,15 @@ public class HttpHandlerCalculadora implements HttpHandler {
         double op1,op2;
         char ope;
         
-        // obtenemos la petici髇 solicitada a trav閟 de un objeto URI
+        // obtenemos la petici贸n solicitada a trav茅s de un objeto URI
         URI uri = exchange.getRequestURI();
         String request = uri.toString();
         System.out.println("["+Utilidades.getFechaHoraActualFormateada()+"] Atendiendo a la peticion: "+ request);
-        // controlamos mediante una expresi髇 regular que la petici髇 tenga el formato correcto
+        // controlamos mediante una expresi贸n regular que la petici贸n tenga el formato correcto
         Pattern p = Pattern.compile("^/calculadora\\?op1=[0-9]+&op2=[0-9]+&ope=(suma|resta|multiplica|divide)$");
         Matcher m = p.matcher(request);
         
-        // traducimos el operador al caracter que reconoce el m閠odo al que vamos a llamar
+        // traducimos el operador al caracter que reconoce el m茅todo al que vamos a llamar
         if(m.matches()){
             datos = request.split("=|\\?|\\&|=");
             op1 = Double.parseDouble(datos[2]);
@@ -57,13 +54,13 @@ public class HttpHandlerCalculadora implements HttpHandler {
                     break;
                 default:
                     ope = ' ';  // lo utilizamos para que tenga valor, este caso no se llega a dar
-                                // ya que lo controlamos con la expresi髇 regular
+                                // ya que lo controlamos con la expresi贸n regular
             }
             // creamos un objeto calculadora y obtenemos el resultado
             Calculadora calculadora = new Calculadora(op1, op2, ope);
             respuesta = calculadora.getResultado();
             
-        // si el formato de la operaci髇 introducida no es correcto lo mostramos mediante un mensaje    
+        // si el formato de la operaci贸n introducida no es correcto lo mostramos mediante un mensaje    
         }else
             respuesta = "El formato de la operacion no es correcto";
         
