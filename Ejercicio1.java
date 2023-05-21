@@ -1,5 +1,3 @@
-package tarea7;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,7 +12,7 @@ import java.security.NoSuchAlgorithmException;
  * 
  * @author JOSE ANTONIO CARRILLO HUETE
  */
-public class Ejercicio1 {
+public class ResumenFichero {
     
     public static void main(String[] args){
         
@@ -26,6 +24,12 @@ public class Ejercicio1 {
             System.out.println("Argumentos no válidos");
     }
     
+    /**
+     * Muestra un resumen de un archivo en base al algoritmo elegido
+     * 
+     * @param nombreArchivo Nombre del archivo a convertir
+     * @param algoritmo algoritmo utilizado
+     */
     public static void mostrarResumen(String nombreArchivo, String algoritmo){
         try {
                 File archivo = new File(nombreArchivo);
@@ -38,6 +42,16 @@ public class Ejercicio1 {
             }
     }
     
+    /**
+     * Método que obtiene el resumen de un archivo según el algoritmo facilitado
+     * 
+     * @param archivo nombre del archivo a mostrar
+     * @param algoritmo algoritmo utilizado
+     * @return resumen del archivo en hexadecimal
+     * @throws NoSuchAlgorithmException si el algoritmo no es válido
+     * @throws FileNotFoundException si el archivo no existe
+     * @throws IOException si hay un error de entrada/salida
+     */
     public static String obtenerResumen(File archivo, String algoritmo) throws NoSuchAlgorithmException, FileNotFoundException, IOException{
         byte[] buffer = new byte[1];
         byte[] resumen;
@@ -61,5 +75,4 @@ public class Ejercicio1 {
         }
         return resultado.toString().toUpperCase();
     }
-    
 }
