@@ -1,4 +1,4 @@
-# Web Services In Java
+# Net Services In Java
 
 ### In this section I collect some small projects from different security and network services using Java.
 ### [ResumenFichero](https://github.com/izhim/Servicios-en-Red/blob/main/ResumenFichero.java)
