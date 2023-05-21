@@ -1,5 +1,3 @@
-package tarea5;
-
 import java.io.BufferedReader;
 import java.io.Console;
 import java.io.DataInputStream;
@@ -36,7 +34,7 @@ import javax.mail.internet.MimeMessage;
  * (no implementadas credenciales)
  * @author JOSE ANTONIO CARRILLO HUETE
  */
-public class Ejercicio2 {
+public class LogFTP_Email {
     
     public static void proceso(){
         
