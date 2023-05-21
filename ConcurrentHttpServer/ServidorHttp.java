@@ -1,6 +1,3 @@
-
-package servidor2;
-
 import servidor1.*;
 import utilidades.Utilidades;
 import com.sun.net.httpserver.HttpServer;
@@ -19,7 +16,7 @@ public class ServidorHttp {
         int puerto;
         String mensaje = "";
         
-        // cabecera de introducción del programa
+        // cabecera de introducciÃ³n del programa
         System.out.println("\n\nSERVIDOR HTTP CONCURRENTE");
         System.out.println("-------------\n");
         
