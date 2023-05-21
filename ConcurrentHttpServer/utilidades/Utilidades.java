@@ -1,12 +1,6 @@
-package utilidades;
-// tarea 4 del profesor 21_22
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- *
- * @author profe
- */
 public class Utilidades  {
 
     public static boolean esPrimo(long numero) {
