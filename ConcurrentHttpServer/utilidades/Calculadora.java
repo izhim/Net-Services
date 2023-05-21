@@ -1,5 +1,3 @@
-package utilidades;
-// tarea 4 del profesor 21_22
 public class Calculadora {
 
     private double num1;
