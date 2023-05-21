@@ -7,4 +7,4 @@ Generates the summary of a file passed as an argument. The digest is displayed i
 It prompts for a username and password in a repetitive process until the username is * or an empty string. Then connects to an FTP server on LocalHost and updates a log.txt file placed in a log directory where the date and time of user connections are stored.
 Finally, it sends the log file content through the Gmail SMTP server (no credentials implemented).
 ### [ConcurrentHttpServer](https://github.com/izhim/Net-Services/tree/main/ConcurrentHttpServer)
-Implementation of an HTTP server that listens from a port received from the console as a parameter when the program starts, providing two different contexts: "/calculator" and "/greet" and working concurrently to be able to serve several clients simultaneously.
+Implementation of an HTTP server that listens from a port received from the console as a parameter when the program starts, providing two different contexts: "/calculadora" and "/saludar" and working concurrently to be able to serve several clients simultaneously.
