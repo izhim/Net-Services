@@ -1,6 +1,3 @@
-
-package servidor1;
-
 import utilidades.Utilidades;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -28,20 +25,20 @@ public class HttpHandlerSaludar implements HttpHandler {
         String[] datos;
         boolean conocido = false;
         
-        // obtenemos la petici髇 solicitada a trav閟 de un objeto URI
+        // obtenemos la petici贸n solicitada a trav茅s de un objeto URI
         URI uri = exchange.getRequestURI();
         String request = uri.toString();
         
-        // controlamos mediante una expresi髇 regular que la petici髇 tenga el formato correcto
+        // controlamos mediante una expresi贸n regular que la petici贸n tenga el formato correcto
         Pattern p = Pattern.compile("^/saludar(\\?(nombre|apellido)=[a-zA-Z]+(&apellido=[a-zA-Z]+)?)?");
         Matcher m = p.matcher(request);
         
         if(m.matches()){
-            // dividimos la petici髇 en par醡etros dentro de un array
+            // dividimos la petici贸n en par谩metros dentro de un array
             datos = request.split("=|\\?|\\&");
             System.out.println("["+Utilidades.getFechaHoraActualFormateada()+"] Atendiendo a peticion: "+request);
 
-            // comprobamos si se ha introducido alg鷑 par醡etro de nombre o apellido
+            // comprobamos si se ha introducido alg煤n par谩metro de nombre o apellido
             for(int i = 1; i < datos.length; i++){
                 if((datos[i].equals("nombre")||datos[i].equals("apellido"))&&(i+1)<= datos.length){
                     respuesta.append(datos[i+1] + " ");
@@ -49,7 +46,7 @@ public class HttpHandlerSaludar implements HttpHandler {
                 }
             }
 
-            // si no se han introducido los par醡etros le asignamos como persona desconocida
+            // si no se han introducido los par谩metros le asignamos como persona desconocida
             if(!conocido)
                 respuesta.append("persona no identificada");
 
